@@ -43,24 +43,25 @@
 
         if (result.type === "success") {
             sessionStore("isLoggedIn", true);
-            sessionStore("guestType", result.data.type);
-            sessionStore("hasPlusOne", result.data.hasPlusOne);
+            sessionStore("guestType", result.data.guestType);
+            sessionStore("hasPlusOne", result.data.plusOne);
             isLoggedIn = true;
             guestType = result.data.type;
-            hasPlusOne = result.data.hasPlusOne;
+            hasPlusOne = result.data.plusOne;
             await invalidateAll();
+        } else {
+            applyAction(result);
         }
-        //applyAction(result);
     }
 
-    function logout() {
-        sessionStore("isLoggedIn", null);
-        sessionStore("guestType", null);
-        sessionStore("hasPlusOne", null);
-        isLoggedIn = false;
-        guestType = "";
-        hasPlusOne = false;
-    }
+    // function logout() {
+    //     sessionStore("isLoggedIn", null);
+    //     sessionStore("guestType", null);
+    //     sessionStore("hasPlusOne", null);
+    //     isLoggedIn = false;
+    //     guestType = "";
+    //     hasPlusOne = false;
+    // }
 
     async function rsvp(event) {
         const data = new FormData(this);
@@ -89,11 +90,14 @@
     const weddingDay = new Date(2023, 8, 1);
     const today = new Date();
     const diffDays = Math.round(Math.abs((today - weddingDay) / oneDay));
+
+    console.log("hasPlusOne " + hasPlusOne)
+
 </script>
 
-{#if isLoggedIn}
+<!-- {#if isLoggedIn}
     <button on:click={logout}>Click me to logout</button>
-{/if}
+{/if} -->
 
 {#if isLoggedIn}
     <div class="flex flex-col">
