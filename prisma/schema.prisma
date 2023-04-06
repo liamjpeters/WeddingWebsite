@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider     = "mysql"
+  url          = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model rsvps {
+  timestamp     DateTime @default(now()) @db.DateTime(0)
+  id            Int      @id @default(autoincrement())
+  attending     Boolean  @default(true) @db.Bit(1)
+  full_name     String   @db.VarChar(512)
+  email         String?   @db.VarChar(256)
+  phone         String?   @db.VarChar(32)
+  plus_one_name String?   @db.VarChar(512)
+  dietry_req    String?   @db.VarChar(1024)
+  song_request  String?   @db.VarChar(512)
+}
+
+model passwords {
+  id            Int      @id @default(autoincrement())
+  type          String   @db.VarChar(32)
+  value         String   @db.VarChar(256)
+  hasPlusOne    Boolean  @default(false) @db.Bit(1)
+}
