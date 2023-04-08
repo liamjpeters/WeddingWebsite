@@ -39,8 +39,6 @@
         /** @type {import('@sveltejs/kit').ActionResult} */
         const result = deserialize(await response.text());
 
-        console.log(result);
-
         if (result.type === "success") {
             sessionStore("isLoggedIn", true);
             sessionStore("guestType", result.data.guestType);
@@ -75,8 +73,6 @@
         /** @type {import('@sveltejs/kit').ActionResult} */
         const result = deserialize(await response.text());
 
-        console.log(result);
-
         if (result.type === "success") {
             await invalidateAll();
         }
@@ -90,8 +86,6 @@
     const weddingDay = new Date(2023, 8, 1);
     const today = new Date();
     const diffDays = Math.round(Math.abs((today - weddingDay) / oneDay));
-
-    console.log("hasPlusOne " + hasPlusOne)
 
 </script>
 
@@ -225,7 +219,7 @@
             </h1>
             <div class="flex flex-row flex-auto">
                 <div
-                    class="basis-0 grow flex flex-col gap-y-4 justify-center items-center"
+                    class="basis-0 grow flex flex-col gap-y-4 justify-center items-center "
                 >
                     <h2>13:00 Tuesday 01 August</h2>
                     <a
@@ -302,10 +296,9 @@
                             Norton Park
                         </h2>
                         <p
-                            class="bg-slate-200 rounded px-4 py-2 text-center block"
+                            class="bg-slate-200 dark:bg-zinc-700 rounded px-4 py-2 text-center block"
                         >
-                            Use code <b>SOMECODE</b> when booking to get the wedding
-                            party rate
+                            Use code <b class="font-mono">BPWE010823</b> when booking to get a 15% discount
                         </p>
                         <div
                             class="flex flex-row justify-center md:justify-start gap-x-4"
@@ -384,16 +377,16 @@
                     <h4 class="basis-0 grow text-start">Drinks Reception</h4>
                 </div>
                 <div class="flex flex-row flex-auto gap-x-8 items-center">
-                    <h3 class="basis-0 grow text-end text-2xl">15:00</h3>
+                    <h3 class="basis-0 grow text-end text-2xl">15:30</h3>
                     <h4 class="basis-0 grow text-start">Wedding Breakfast</h4>
                 </div>
                 <div class="flex flex-row flex-auto gap-x-8 items-center">
-                    <h3 class="basis-0 grow text-end text-2xl">18:00</h3>
+                    <h3 class="basis-0 grow text-end text-2xl">19:00</h3>
                     <h4 class="basis-0 grow text-start">Evening Reception</h4>
                 </div>
                 <div class="flex flex-row flex-auto gap-x-8 items-center">
                     <h3 class="basis-0 grow text-end text-2xl">23:30</h3>
-                    <h4 class="basis-0 grow text-start">Carrages</h4>
+                    <h4 class="basis-0 grow text-start">Carriages</h4>
                 </div>
             </div>
         </div>
@@ -530,7 +523,7 @@
                 <input type="submit" disabled style="display: none" aria-hidden="true" />
                 <label
                     for="default-radio-1"
-                    class="flex items-center gap-x-2 text-sm font-medium text-gray-900"
+                    class="flex items-center gap-x-2 text-sm font-medium text-gray-900 dark:text-gray-200"
                 >
                     <input
                         checked
@@ -544,7 +537,7 @@
                 </label>
                 <label
                     for="default-radio-2"
-                    class="flex items-center gap-x-2 text-sm font-medium text-gray-900"
+                    class="flex items-center gap-x-2 text-sm font-medium text-gray-900 dark:text-gray-200"
                 >
                     <input
                         id="default-radio-2"
@@ -556,12 +549,12 @@
                     I will not be attending
                 </label>
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="fullname"
                 >
                     Full Name
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 leading-tight dark:bg-zinc-700 dark:border-zinc-600 focus:outline-none focus:shadow-outline"
                         id="fullname"
                         name="fullname"
                         type="text"
@@ -576,12 +569,12 @@
                     {/if}
                 </label>
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="email"
                 >
                     Email Address
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-zinc-700 dark:border-zinc-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="email"
                         name="email"
                         type="email"
@@ -596,12 +589,12 @@
                     {/if}
                 </label>
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="phone"
                 >
                     Phone Number
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-zinc-700 dark:border-zinc-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="phone"
                         name="phone"
                         type="tel"
@@ -617,12 +610,12 @@
                 </label>
                 {#if hasPlusOne}
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="plusone"
                 >
                     +1 Name
                     <input
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-zinc-700 dark:border-zinc-600 leading-tight focus:outline-none focus:shadow-outline"
                         id="plusone"
                         name="plusone"
                         type="text"
@@ -631,12 +624,12 @@
                 </label>
                 {/if}
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="dietry"
                 >
-                    Dietry Requirements
+                Dietary Requirements
                     <textarea
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-zinc-700 dark:border-zinc-600 leading-tight focus:outline-none focus:shadow-outline"
                         style="resize: none;"
                         id="dietry"
                         name="dietry"
@@ -644,12 +637,12 @@
                     />
                 </label>
                 <label
-                    class="block text-gray-700 text-sm font-bold mb-2"
+                    class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
                     for="song_req"
                 >
                     Song Requests
                     <textarea
-                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-zinc-700 dark:border-zinc-600 leading-tight focus:outline-none focus:shadow-outline"
                         style="resize: none;"
                         id="song_req"
                         name="song_req"
@@ -682,7 +675,7 @@
                     </h3>
                     <h4 class="basis-0 grow text-start">
                         Those attending the whole day should aim to arrive by <b
-                            >XX:00</b
+                            >12:30</b
                         >. We would ask our evening guests to arrive around
                         <b>19:00</b>.
                     </h4>
@@ -692,7 +685,7 @@
                         Is there parking?
                     </h3>
                     <h4 class="basis-0 grow text-start">
-                        Yes Clockbarn have ample space for all guests to park in
+                        Yes, Clockbarn have ample space for all guests to park in
                         their car park. You are welcome to leave cars overnight
                         but they do need to be collected the following morning
                         between 8am and 11am.
@@ -721,7 +714,7 @@
                     </h3>
                     <h4 class="basis-0 grow text-start">
                         Your presence at our wedding is the best gift we could
-                        receive.<br />
+                        receive.
                         But for those who feel they would like to contribute, we
                         would be grateful for donations towards our honeymoon so
                         we can truly make it a once in a lifetime trip.
