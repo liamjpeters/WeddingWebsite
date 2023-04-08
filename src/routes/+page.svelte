@@ -83,9 +83,9 @@
     export let form;
 
     const oneDay = 24 * 60 * 60 * 1000;
-    const weddingDay = new Date(2023, 8, 1);
-    const today = new Date();
-    const diffDays = Math.round(Math.abs((today - weddingDay) / oneDay));
+    const weddingDay = new Date(2023, 7, 1);
+    let today = new Date();
+    let diffDays = Math.ceil(Math.abs((weddingDay - today) / oneDay));
 
 </script>
 
