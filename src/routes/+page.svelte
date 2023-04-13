@@ -298,7 +298,8 @@
                         <p
                             class="bg-slate-200 dark:bg-zinc-700 rounded px-4 py-2 text-center block"
                         >
-                            Use code <b class="font-mono">BPWE010823</b> when booking to get a 15% discount
+                            We have an allocation of rooms and a 15% discount code for Norton Park.<br><br> To use it you need to phone the reservations team and use code <b class="font-mono">BPWE010823</b><br><br>
+                            The reservations team can be reached <b>Monday to Friday 8am - 6pm & Weekends 10am - 4pm</b> on <a class="underline text-accent hover:text-accent-dark visited:text-accent" href='tel:03301071599'>0330 107 1599</a>
                         </p>
                         <div
                             class="flex flex-row justify-center md:justify-start gap-x-4"
@@ -306,11 +307,13 @@
                             <a
                                 href="https://www.nortonparkhotel.com/"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                target="_blank"
                                 >Website</a
                             >
                             <a
                                 href="https://goo.gl/maps/epXtnPHujS56Mkia8"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                target="_blank"
                                 >Get Directions</a
                             >
                         </div>
@@ -324,11 +327,13 @@
                         >
                             <a
                                 href="https://www.travelodge.co.uk/hotels/74/Barton-Stacey-hotel"
+                                target="_blank"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 >Website</a
                             >
                             <a
                                 href="https://goo.gl/maps/BKde6RLM8CiDewio6"
+                                target="_blank"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 >Get Directions</a
                             >
@@ -343,11 +348,13 @@
                         >
                             <a
                                 href="https://www.wyndhamhotels.com/en-uk/days-inn/winchester-united-kingdom/days-inn-sutton-scotney-north/overview?cid=PS:iqf55rbhqbwtf4r&gclid=Cj0KCQjwwtWgBhDhARIsAEMcxeDoNi7cVHdCqnpO5DXDLL3bxLT-4DU1kxAKzdUPHFzeM66wFRbUcsIaAmpmEALw_wcB&gclsrc=aw.ds"
+                                target="_blank"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 >Website</a
                             >
                             <a
                                 href="https://goo.gl/maps/6Fapw9YmC3Jdrib46"
+                                target="_blank"
                                 class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                                 >Get Directions</a
                             >
