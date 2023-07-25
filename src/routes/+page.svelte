@@ -3,7 +3,7 @@
     import { applyAction, deserialize } from "$app/forms";
     import { invalidateAll } from "$app/navigation";
     import { browser } from "$app/environment";
-    let isLoggedIn = false;
+    let isLoggedIn = true;
     let hasPlusOne = false;
     let guestType = "";
     if (browser) {
@@ -109,7 +109,15 @@
             >
             <a
                 class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
-                href="#Nearby">Nearby</a
+                href="#Photos">Photos</a
+            >
+            <a
+                class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
+                href="#Gifts">Gifts</a
+            >
+            <a
+                class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
+                href="#Nearby">Hotels</a
             >
             <a
                 class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
@@ -119,10 +127,10 @@
                 class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
                 href="#Food">Food</a
             >
-            <a
+            <!-- <a
                 class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
                 href="#RSVP">RSVP</a
-            >
+            > -->
             <a
                 class="text-accent hover:text-accent-dark font-staatliches tracking-widest text-2xl px-6 py-4 hover:underline underline-offset-8 hover:translate-y-[-4px] transition-all duration-200"
                 href="#FAQ">FAQ</a
@@ -254,7 +262,7 @@
                 <div
                     class="basis-0 grow flex flex-col justify-center items-center font-poppins gap-y-4"
                 >
-                    <h2>
+                    <h2 class="text-center">
                         Clock Barn<br />Tufton Warren<br />Whitchurch<br />RG28
                         7RB
                     </h2>
@@ -269,12 +277,74 @@
 
         <hr class="mt-4" />
 
+        <!-- Photos -->
+        <div id="Photos" class="flex flex-col py-8">
+            <h1
+                class="font-staatliches text-4xl font-bold text-center text-accent mb-8"
+            >
+                Photos
+            </h1>
+            <p class="font-poppins mb-4">
+                Our photographer will be taking photos throughout the day, but we'd love to see yours too! Please us the link or QR code below to upload any photos you take on the day.
+            </p>
+            <div class="flex md:flex-row flex-col gap-y-8 gap-x-4 flex-auto">
+                <div class="flex basis-0 grow justify-center items-center">
+                    <img
+                        class="aspect-square object-cover rounded-3xl h-72"
+                        src="img/qrcode.png"
+                        alt="QR code linking to the upload page"
+                    />
+                </div>
+                <div
+                    class="basis-0 grow flex flex-col justify-center items-center md:items-start font-poppins gap-y-4"
+                >
+                    <a
+                        href="https://bit.ly/EBLPWed"
+                        target="_blank"
+                        class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >Add Photos</a
+                    >
+                    <p class="italic"> Use Pin <b>2083</b> if prompted</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-4" />
+
+        <!-- Gifts -->
+        <div id="Gifts" class="flex flex-col py-8">
+            <h1
+                class="font-staatliches text-4xl font-bold text-center text-accent mb-8"
+            >
+                Gifts
+            </h1>
+            <p class="font-poppins mb-4">
+                Your presence at our wedding is the best gift we could
+                receive.
+                But for those who feel they would like to contribute, we
+                would be grateful for donations towards our honeymoon so
+                we can truly make it a once in a lifetime trip.
+            </p>
+            <div
+                class="basis-0 grow flex flex-col gap-y-4 justify-center items-center "
+            >
+                <a
+                    href="https://monzo.me/emiliebrown7"
+                    target="_blank"
+                    class="bg-accent hover:bg-accent-dark text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    >Donate</a
+                >
+            </div>
+        </div>
+
+        <hr class="mt-4" />
+
         <!-- Nearby -->
         <div id="Nearby" class="flex flex-col py-8">
             <h1
                 class="font-staatliches text-4xl font-bold text-center text-accent mb-8"
             >
-                Nearby
+                Hotels
             </h1>
             <p class="font-poppins mb-4">
                 The evening before the wedding we'll be staying at Norton Park
@@ -291,16 +361,16 @@
                 <div
                     class="basis-0 grow flex flex-col items-stretch font-poppins gap-y-4"
                 >
-                    <div class="flex flex-col gap-y-4">
+                    <div class="flex grow flex-col gap-y-4">
                         <h2 class="text-2xl md:text-start text-center">
                             Norton Park
                         </h2>
-                        <p
+                        <!-- <p
                             class="bg-slate-200 dark:bg-zinc-700 rounded px-4 py-2 text-center block"
                         >
                             We have an allocation of rooms and a 15% discount code for Norton Park.<br><br> To use it you need to phone the reservations team and use code <b class="font-mono">BPWE010823</b><br><br>
                             The reservations team can be reached <b>Monday to Friday 8am - 6pm & Weekends 10am - 4pm</b> on <a class="underline text-accent hover:text-accent-dark visited:text-accent" href='tel:03301071599'>0330 107 1599</a>
-                        </p>
+                        </p> -->
                         <div
                             class="flex flex-row justify-center md:justify-start gap-x-4"
                         >
@@ -339,7 +409,7 @@
                             >
                         </div>
                     </div>
-                    <div class="flex flex-col gap-y-4">
+                    <div class="flex grow flex-col gap-y-4">
                         <h2 class="text-2xl md:text-start text-center">
                             DaysInn
                         </h2>
@@ -506,7 +576,7 @@
         <hr />
 
         <!-- RSVP -->
-        <div id="RSVP" class="flex flex-col py-8">
+        <!-- <div id="RSVP" class="flex flex-col py-8">
             <h1
                 class="font-staatliches text-4xl font-bold text-center text-accent mb-8"
             >
@@ -666,7 +736,7 @@
             {/if}
         </div>
 
-        <hr />
+        <hr /> -->
 
         <!-- FAQs -->
         <div id="FAQ" class="flex flex-col py-8">
