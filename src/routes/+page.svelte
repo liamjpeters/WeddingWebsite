@@ -510,7 +510,7 @@
                             Chicken and ham hock, shallot and caper mayonnaise
                         </h4>
                         <h4 class="basis-0 grow text-center md:text-start">
-                            <em>Vegetarian Option TBC</em>
+                            Herritage tomato salad, mozzarella, shallot and basil vinaigrette <em>(Vegetarian)</em>
                         </h4>
                         <hr class="hidden md:block mt-4" />
                     </div>
@@ -527,7 +527,7 @@
                             new potatoes, goat's curd and rosemary oil
                         </h4>
                         <h4 class="basis-0 grow text-center md:text-start">
-                            <em>Vegetarian Option TBC</em>
+                            Tomato, Aubergine and corgette tart, smoked mozzarella and red onion salsa <em>(Vegetarian)</em>
                         </h4>
                         <hr class="hidden md:block mt-4" />
                     </div>
